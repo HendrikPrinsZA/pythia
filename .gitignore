@@ -131,4 +131,4 @@ dmypy.json
 # Pythia
 !.gitkeep
 cache.json
-scripts/
+scripts/*
