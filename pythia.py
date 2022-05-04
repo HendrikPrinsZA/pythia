@@ -112,6 +112,16 @@ script_path = createOrGetScript(input_prompt)
 if script_path is None:
   print(f"Something went wrong!")
 
+with open(script_path, 'r') as file:
+  text = file.read()
+  file.close()
+  print(f"""Response from OpenAI
+  
+```py
+{text}
+```
+""")
+
 answer = input("Do you want to execute the script? ") 
 if answer[0].lower() == "y":
   os.system(f"python3 {script_path}")
